@@ -7,13 +7,14 @@ var app = express()
 app.configure(function() {
 	app.use(express.methodOverride())
 	app.use(express.bodyParser())
-	app.use('/app', express.static('app'))
+	app.use(express.static(__dirname))
 	app.use(express.errorHandler({
 		dumpExceptions: true,
 		showStack: true,
 	}))
 	app.use(app.router)
 })
+
 
 app.get(
 	'/',
