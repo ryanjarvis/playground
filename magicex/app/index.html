@@ -1,9 +1,9 @@
-<html> 
+<html ng-app> 
   <head>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
-  <body>
+  <body ng-controller="CardController">
     <div class="page-wrapper">
       <div class="top-area-wrapper">
 
@@ -97,7 +97,7 @@
 
       <div class="bottom-area-wrapper">
         <input class="type-ahead-card-name" value="card name..." name="type-ahead-card-name"/>
-        <table>
+        <table ng-init="getAllCards()">
           <tr>
             <th></th>
             <th class="card">Card</th>
@@ -105,6 +105,26 @@
             <th class="buy">Buy</th>
             <th class="sell">Sell</th>
             <th class="activity sort-by">Activity</th>
+          </tr>
+          <tr ng-repeat="card in cards">
+            <td class="radio">
+              <input type="radio" name="card-selection">
+            </td>
+            <td class="card">
+              {{card.name}}
+            </td>
+            <td class="set">
+              {{card.set}}
+            </td>
+            <td class="buy">
+              $2.20
+            </td>
+            <td class="sell">
+              $3.45
+            </td>
+            <td class="activity">
+              high
+            </td>
           </tr>
           <tr>
             <td class="radio">
@@ -151,6 +171,8 @@
       </div>
 
     </div>
+    <script type="text/javascript" src="angular.js" ></script>
+    <script type="text/javascript" src="controllers.js"></script>
   </body>
 
 </html>
