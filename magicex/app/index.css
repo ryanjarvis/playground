@@ -1,0 +1,101 @@
+h2{
+  margin: 0;
+  font-family: 'Open Sans', Arial;
+  color: #333;
+}
+
+input[type="button"]{
+  border-radius: 3px;
+  border: 1px solid #555;
+}
+
+.page-wrapper{
+  width: 900px;
+}
+
+.top-area-wrapper, .bottom-area-wrapper{
+  border: 1px #ddd solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.top-area-wrapper{
+  margin-bottom: 10px;
+}
+
+.top-area-wrapper h2{
+  margin-bottom: 10px;
+}
+.prices-grouping{
+  width: 224px;
+  display: inline-block;
+  vertical-align: top;
+}
+.price-wrapper{
+  width: 110px;
+  display: inline-block;
+}
+.price-wrapper{
+  text-align: center;
+}
+.price-wrapper .amount{
+  font-size: 20pt;
+  font-family: 'Open Sans', Arial;
+  color: #333;
+}
+.price-wrapper .amount-label{
+  font-size: 10pt;
+  color: #bbb;
+  font-family: 'Open Sans', Arial;
+  font-weight: 300;
+}
+
+.orders-wrapper{
+  border: solid #ddd 1px;
+  width: 320px;
+  display: inline-block;
+  overflow-y: scroll;
+  font-family: 'Open Sans', Arial;
+  position: relative;
+  vertical-align: top;
+  height: 165px;
+}
+
+.orders-wrapper .heading{
+  font-weight: 700;
+  color: #333;
+  margin: 2px 0 0 5px
+}
+
+.orders-wrapper .add{
+  position: absolute;
+  right: 3px;
+  top: 2px;
+}
+
+.orders-wrapper td{
+  font-size: 10pt;
+}
+
+.orders-wrapper tr:first-child{
+  font-weight: bold;
+}
+
+.orders-wrapper .price{
+  text-align: right;
+  padding-right: 7px;
+  width: 40px;
+}
+
+.orders-wrapper .time{
+  color: #ccc;
+  width: 85px;
+}
+
+.orders-wrapper .user{
+  width: 130px;
+}
+
+.orders-wrapper .cancel{
+  
+}
