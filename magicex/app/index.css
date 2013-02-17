@@ -1,3 +1,7 @@
+body{
+  background-color: #ddd;
+}
+
 h2{
   margin: 0;
   font-family: 'Open Sans', Arial;
@@ -7,16 +11,32 @@ h2{
 input[type="button"]{
   border-radius: 3px;
   border: 1px solid #555;
+  cursor: pointer;
+}
+
+input[type="button"]:hover{
+  background-color: #ddd;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
 }
 
 .page-wrapper{
   width: 900px;
+  margin: 0 auto;
 }
 
 .top-area-wrapper, .bottom-area-wrapper{
-  border: 1px #ddd solid;
+  border: 1px #ccc solid;
   border-radius: 5px;
   padding: 10px;
+  background-color: #fff;
 }
 
 .top-area-wrapper{
@@ -69,7 +89,7 @@ input[type="button"]{
 
 .orders-wrapper .add{
   position: absolute;
-  right: 3px;
+  right: 1px;
   top: 2px;
 }
 
@@ -85,6 +105,7 @@ input[type="button"]{
   text-align: right;
   padding-right: 7px;
   width: 40px;
+  color: #333;
 }
 
 .orders-wrapper .time{
@@ -93,9 +114,16 @@ input[type="button"]{
 }
 
 .orders-wrapper .user{
-  width: 130px;
+  width: 115px;
 }
 
-.orders-wrapper .cancel{
-  
+
+.type-ahead-card-name{
+  width: 290px;
+  border: 1px solid #aaa;
+  font-size: 14pt;
+}
+
+.bottom-area-wrapper table{
+  width: 100%;
 }
