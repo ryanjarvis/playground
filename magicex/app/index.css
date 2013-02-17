@@ -117,7 +117,6 @@ a:hover{
   width: 115px;
 }
 
-
 .type-ahead-card-name{
   width: 290px;
   border: 1px solid #aaa;
@@ -126,4 +125,32 @@ a:hover{
 
 .bottom-area-wrapper table{
   width: 100%;
+  margin-top: 5px;
 }
+
+.bottom-area-wrapper th.card,
+.bottom-area-wrapper th.set{
+  text-align: left;
+}
+
+.bottom-area-wrapper th.sort-by{
+  background-color: #ccc;
+}
+
+.bottom-area-wrapper th.buy,
+.bottom-area-wrapper th.sell,
+.bottom-area-wrapper td.buy,
+.bottom-area-wrapper td.sell{
+  text-align: right;
+}
+
+.bottom-area-wrapper td.activity{
+  text-align: center;
+}
+
+
+
+.bottom-area-wrapper th, .bottom-area-wrapper td{
+  font-family: 'Open Sans', Arial;
+}
+  
