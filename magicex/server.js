@@ -131,6 +131,18 @@ app.get(
 		res.end()
 	}
 )
+app.get(
+  '/orders/card/:id',
+  function(req, res) {
+    console.log("Getting orders for card with id " + req.params.id)
+    var card = getCardByID(req.params.id)
+    var orders = getOrdersForCard(card.id)
+		res.writeHead(200, {'content-type': 'application/json'})
+		res.write( JSON.stringify({orders: orders}) )
+		res.end()
+  }
+)
+    
 
 app.listen(8080)
 console.log("MagicEx server online and listening on port 8080")
