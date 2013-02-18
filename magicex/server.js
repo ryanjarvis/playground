@@ -92,17 +92,18 @@ app.get(
 	}
 )
 
+var timestamp = new Date().getTime()
 var orders = [
-	{id: 0, type: 'b', user_id: 0, card_id: 0, timestamp: 1000, price: 2.20},
-	{id: 1, type: 's', user_id: 0, card_id: 1, timestamp: 1000, price: 3.10},
-	{id: 2, type: 'b', user_id: 1, card_id: 3, timestamp: 1000, price: 2.30},
-	{id: 3, type: 's', user_id: 1, card_id: 5, timestamp: 1000, price: 4.40},
-	{id: 4, type: 'b', user_id: 2, card_id: 2, timestamp: 1000, price: 2.50},
-	{id: 5, type: 's', user_id: 2, card_id: 3, timestamp: 1000, price: 1.60},
-	{id: 6, type: 'b', user_id: 3, card_id: 5, timestamp: 1000, price: 2.70},
-	{id: 7, type: 's', user_id: 4, card_id: 4, timestamp: 1000, price: 3.80},
-	{id: 8, type: 'b', user_id: 4, card_id: 1, timestamp: 1000, price: 4.90},
-	{id: 9, type: 's', user_id: 4, card_id: 2, timestamp: 1000, price: 5.00},
+	{id: 0, type: 'b', user_id: 0, card_id: 0, timestamp: timestamp, price: 2.20},
+	{id: 1, type: 's', user_id: 0, card_id: 1, timestamp: timestamp, price: 3.10},
+	{id: 2, type: 'b', user_id: 1, card_id: 3, timestamp: timestamp, price: 2.30},
+	{id: 3, type: 's', user_id: 1, card_id: 5, timestamp: timestamp, price: 4.40},
+	{id: 4, type: 'b', user_id: 2, card_id: 2, timestamp: timestamp, price: 2.50},
+	{id: 5, type: 's', user_id: 2, card_id: 3, timestamp: timestamp, price: 1.60},
+	{id: 6, type: 'b', user_id: 3, card_id: 5, timestamp: timestamp, price: 2.70},
+	{id: 7, type: 's', user_id: 4, card_id: 4, timestamp: timestamp, price: 3.80},
+	{id: 8, type: 'b', user_id: 4, card_id: 1, timestamp: timestamp, price: 4.90},
+	{id: 9, type: 's', user_id: 4, card_id: 2, timestamp: timestamp, price: 5.00},
 ]
 
 function getOrderByID(id) {
