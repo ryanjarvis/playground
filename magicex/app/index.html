@@ -8,9 +8,9 @@
       <h1>
         Magic the Gathering Card Exchange
       </h1>
-      <div class="top-area-wrapper">
+      <div class="top-area-wrapper" ng-controller="CardDetailController">
 
-        <h2>Really Really Long Card Name Here</h2>
+        <h2>{{card_config.selected_card.name}}</h2>
 
         <div class="prices-grouping">
           <div class="price-wrapper">
@@ -100,7 +100,7 @@
 
       <div class="bottom-area-wrapper">
         <input class="type-ahead-card-name" value="card name..." name="type-ahead-card-name"/>
-        <table ng-init="getAllCards()">
+        <table ng-init="getAllCards();">
           <tr>
             <th></th>
             <th class="card">Card</th>
@@ -109,55 +109,15 @@
             <th class="sell">Sell</th>
             <th class="activity sort-by">Activity</th>
           </tr>
-          <tr ng-repeat="card in cards">
+          <tr ng-repeat="card in card_config.cards">
             <td class="radio">
-              <input type="radio" name="card-selection">
+              <input value="{{card.id}}" type="radio" name="card-selection" ng-model="card_config.selected_card_id" ng-change="setSelectedCard()">
             </td>
             <td class="card">
               {{card.name}}
             </td>
             <td class="set">
               {{card.set}}
-            </td>
-            <td class="buy">
-              $2.20
-            </td>
-            <td class="sell">
-              $3.45
-            </td>
-            <td class="activity">
-              high
-            </td>
-          </tr>
-          <tr>
-            <td class="radio">
-              <input type="radio" name="card-selection">
-            </td>
-            <td class="card">
-              Really Really Long Card Name Here
-            </td>
-            <td class="set">
-              Awakenings
-            </td>
-            <td class="buy">
-              $2.20
-            </td>
-            <td class="sell">
-              $3.45
-            </td>
-            <td class="activity">
-              high
-            </td>
-          </tr>
-          <tr>
-            <td class="radio">
-              <input type="radio" name="card-selection">
-            </td>
-            <td class="card">
-              Some other card
-            </td>
-            <td class="set">
-              Awakenings
             </td>
             <td class="buy">
               $2.20
