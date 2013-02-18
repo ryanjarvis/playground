@@ -21,8 +21,8 @@ function CardController($scope, $http) {
   $scope.getAllCards = function() {
 		$http.get('/cards').success( function(data,status) {
 			$scope.card_config.cards = data.cards;
-      $scope.card_config.selected_card = $scope.card_config.cards[0];
       $scope.card_config.selected_card_id = $scope.card_config.cards[0].id;
+      $scope.setSelectedCard();
 		});
 	};
 

@@ -40,7 +40,7 @@
           <table>
             <tr ng-repeat="buy_order in card_config.buy_orders">
               <td class="price">${{buy_order.price}}</td>
-              <td class="time">{{buy_order.timestamp}}</td>
+              <td class="time">{{buy_order.timestamp | date:'medium'}}</td>
               <td class="user"><a href="#">{{buy_order.user_id}}</a></td>
               <td class="cancel"><a href="#">contact</a></td>
             </tr>
@@ -54,7 +54,7 @@
           <table>
             <tr ng-repeat="sell_order in card_config.sell_orders">
               <td class="price">${{sell_order.price}}</td>
-              <td class="time">{{sell_order.timestamp}}</td>
+              <td class="time">{{sell_order.timestamp | date:'medium'}}</td>
               <td class="user"><a href="#">{{sell_order.user_id}}</a></td>
               <td class="cancel"><a href="#">contact</a></td>
             </tr>
