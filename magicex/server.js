@@ -112,6 +112,15 @@ function getOrderByID(id) {
 	}
 }
 
+function getOrdersForCard(card_id) {
+  var card_orders = []
+  for (var i = 0; i<orders.length; i++) {
+    var order = orders[i]
+    if (order.card_id == card_id) card_orders.push(order)
+  }
+  return card_orders
+}
+
 app.get(
 	'/orders',
 	function(req, res) {
